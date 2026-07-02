@@ -1,0 +1,319 @@
+/* =============================================
+   COFFEE HUB BARDOLI — Animations
+   ============================================= */
+
+/* --- Loader Keyframes --- */
+@keyframes loaderGlowPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.7; }
+  50%       { transform: translate(-50%, -50%) scale(1.22); opacity: 1;   }
+}
+
+@keyframes loaderSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loaderCupFloat {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes loaderSteam {
+  0%   { transform: translateY(0)     scaleX(1);   opacity: 0;   }
+  15%  { opacity: 0.75; }
+  70%  { opacity: 0.25; }
+  100% { transform: translateY(-30px) scaleX(0.15); opacity: 0;  }
+}
+
+@keyframes loaderLetterIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes loaderSubtitleIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes loadBar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes floatCup {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+
+  50% {
+    transform: translateY(-18px) rotate(4deg);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Applied Animations --- */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease both;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+.animate-fade-down {
+  animation: fadeDown 0.6s ease both;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.7s ease both;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.7s ease both;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.6s ease both;
+}
+
+/* Hero animations */
+.hero-badge {
+  animation: fadeDown 0.8s ease 0.2s both;
+}
+
+.hero-title {
+  animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.hero-typing {
+  animation: fadeUp 0.9s ease 0.5s both;
+}
+
+.hero-actions {
+  animation: fadeUp 0.9s ease 0.7s both;
+}
+
+/* Floating coffee cup */
+.floating-cup {
+  animation: floatCup 4s ease-in-out infinite;
+  filter: drop-shadow(0 8px 16px rgba(107, 58, 31, 0.25));
+}
+
+/* Ripple button effect */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn .ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+  animation: ripple 0.6s linear;
+}
+
+/* Delay helpers */
+.delay-100 {
+  animation-delay: 0.1s !important;
+  transition-delay: 0.1s !important;
+}
+
+.delay-200 {
+  animation-delay: 0.2s !important;
+  transition-delay: 0.2s !important;
+}
+
+.delay-300 {
+  animation-delay: 0.3s !important;
+  transition-delay: 0.3s !important;
+}
+
+.delay-400 {
+  animation-delay: 0.4s !important;
+  transition-delay: 0.4s !important;
+}
+
+.delay-500 {
+  animation-delay: 0.5s !important;
+  transition-delay: 0.5s !important;
+}
+
+.delay-600 {
+  animation-delay: 0.6s !important;
+  transition-delay: 0.6s !important;
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-light) 25%, rgba(255, 255, 255, 0.5) 50%, var(--bg-light) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius);
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(107, 58, 31, 0.18);
+}
+
+/* --- WhatsApp pulse --- */
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+  50%       { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+}
+
+/* --- Section tag shine sweep --- */
+@keyframes tagShine {
+  from { left: -120%; }
+  to   { left:  150%; }
+}
+
+/* --- Hero scroll hint bounce --- */
+@keyframes scrollHintBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.55; }
+  50%       { transform: translateX(-50%) translateY(8px);  opacity: 0.9; }
+}

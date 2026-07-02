@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Coffee Hub Bardoli</title>
+  <meta name="description"
+    content="Learn the story of Coffee Hub Bardoli — Bardoli's favourite 4.9-star café at Sundaram Square.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+  <div id="loading-screen">
+    <div class="loader-glow"></div>
+    <div class="loader-inner">
+      <div class="loader-icon-wrap">
+        <div class="loader-ring"></div>
+        <svg class="loader-cup-icon" viewBox="0 0 56 56" fill="none" width="56" height="56">
+          <path d="M10 24h32l-4 22H14L10 24z" fill="rgba(200,144,14,0.9)"/>
+          <path d="M42 30h5a7 7 0 0 1 0 14h-5" stroke="rgba(255,220,100,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="8" y="18" width="36" height="8" rx="4" fill="rgba(200,144,14,0.4)"/>
+          <ellipse cx="26" cy="18" rx="13" ry="4" fill="rgba(255,255,255,0.1)"/>
+        </svg>
+        <div class="loader-steam-wrap">
+          <div class="steam-wisp sw-1"></div>
+          <div class="steam-wisp sw-2"></div>
+          <div class="steam-wisp sw-3"></div>
+        </div>
+      </div>
+      <h1 class="loader-logo-text"><span class="ll ll-1">C</span><span class="ll ll-2">o</span><span class="ll ll-3">f</span><span class="ll ll-4">f</span><span class="ll ll-5">e</span><span class="ll ll-6">e</span>&thinsp;<span class="ll ll-7">H</span><span class="ll ll-8">u</span><span class="ll ll-9">b</span></h1>
+      <p class="loader-subtitle">Bardoli's Finest Café</p>
+      <div class="loader-progress"><div class="loader-progress-fill"></div></div>
+    </div>
+  </div>
+  <div id="scroll-progress"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+          <line x1="6" y1="1" x2="6" y2="4" />
+          <line x1="10" y1="1" x2="10" y2="4" />
+          <line x1="14" y1="1" x2="14" y2="4" />
+        </svg><span class="nav-logo-text">Coffee Hub</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html" class="active">About</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/reviews.html">Reviews</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions"><button class="theme-btn" aria-label="Toggle theme"><svg class="theme-icon-moon"
+            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg><svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" style="display:none">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+          </svg></button><a href="/reservation.html" class="btn btn-primary">Reserve Table</a><button class="hamburger"
+          id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+    </div>
+  </header>
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <nav class="mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/about.html" class="active">About</a><a
+      href="/menu.html">Menu</a><a href="/gallery.html">Gallery</a><a href="/reviews.html">Reviews</a><a
+      href="/contact.html">Contact</a><a href="/reservation.html" class="btn btn-primary">Reserve a Table</a></nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="page-header-tag">Our Story</div>
+      <h1 class="page-header-title">Born from a Love of Coffee</h1>
+      <p class="page-header-subtitle">From a neighbourhood dream to Bardoli's most-loved café — rated 4.9 stars by our
+        community.</p>
+    </div>
+  </div>
+
+  <!-- ORIGIN STORY -->
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <div class="grid-2">
+        <div class="reveal-left">
+          <div class="section-tag">Our Beginning</div>
+          <h2 class="section-title" style="text-align:left">Born from a love of coffee.</h2>
+          <p style="color:var(--text-muted);margin-bottom:16px;line-height:1.85">Coffee Hub started with a simple
+            belief: that Bardoli deserved a café it could truly call its own. Nestled in Sundaram Square on Lal Bahadur
+            Shastri Road, we opened our doors to the community of Rushikesh Nagar and Radhabaug Society — and they
+            welcomed us with open arms.</p>
+          <p style="color:var(--text-muted);margin-bottom:24px;line-height:1.85">Today, with a 4.9-star Google rating
+            and thousands of happy guests, Coffee Hub is more than a café — it's a daily ritual for the people of
+            Bardoli. Whether you come for the coffee, the food, or simply to breathe, we promise to make every visit
+            worth the trip.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:600"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>Ethically Sourced</div>
+            <div style="display:flex;align-items:center;gap:8px;font-weight:600"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>Crafted with Love</div>
+            <div style="display:flex;align-items:center;gap:8px;font-weight:600"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>Open from 11 AM</div>
+            <div style="display:flex;align-items:center;gap:8px;font-weight:600"><svg width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>4.9 Google Rating</div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&q=80"
+            alt="Barista pouring coffee"
+            style="border-radius:var(--radius-lg);width:100%;height:500px;object-fit:cover;box-shadow:var(--shadow-lg)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section-sm" style="background:var(--bg-light)">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Why Us</div>
+        <h2 class="section-title">The Coffee Hub Difference</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card reveal delay-100">
+          <div class="diff-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg></div>
+          <h3 class="diff-title">Fresh Ingredients</h3>
+          <p class="diff-desc">Local produce, sourced daily. Nothing frozen, nothing artificial.</p>
+        </div>
+        <div class="diff-card reveal delay-200">
+          <div class="diff-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="1" x2="6" y2="4" />
+              <line x1="10" y1="1" x2="10" y2="4" />
+              <line x1="14" y1="1" x2="14" y2="4" />
+            </svg></div>
+          <h3 class="diff-title">Premium Beans</h3>
+          <p class="diff-desc">Top-grade Arabica beans, freshly ground for every cup.</p>
+        </div>
+        <div class="diff-card reveal delay-300">
+          <div class="diff-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg></div>
+          <h3 class="diff-title">Expert Baristas</h3>
+          <p class="diff-desc">Trained and passionate about the craft of extraction.</p>
+        </div>
+        <div class="diff-card reveal delay-400">
+          <div class="diff-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg></div>
+          <h3 class="diff-title">Fast Service</h3>
+          <p class="diff-desc">Great coffee, no long waits. Your time is precious to us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER MESSAGE -->
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <div class="card reveal" style="overflow:visible">
+        <div
+          style="display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);overflow:hidden;background:var(--primary)">
+          <div style="padding:56px;display:flex;flex-direction:column;justify-content:center">
+            <div
+              style="font-size:0.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px">
+              A Message from Our Team</div>
+            <h2 style="font-family:var(--font-serif);font-size:1.8rem;color:#fff;margin-bottom:20px">Built for Bardoli,
+              by Bardoli.</h2>
+            <p
+              style="color:rgba(255,255,255,.85);font-style:italic;font-size:1.05rem;line-height:1.8;margin-bottom:28px">
+              "I started Coffee Hub because I wanted Bardoli to have a place that feels like home — warm, welcoming, and
+              never in a hurry. Every cup we serve is a small act of care. I'm proud of what our team has built, and I'm
+              grateful every day for the community that chose us."</p>
+            <div>
+              <div style="font-weight:700;color:#fff;font-size:1rem">The Coffee Hub Team</div>
+              <div style="color:rgba(255,255,255,.6);font-size:.85rem">Bardoli, Gujarat</div>
+            </div>
+          </div>
+          <div><img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?w=800&q=80" alt="Team at Coffee Hub"
+              style="width:100%;height:100%;object-fit:cover;min-height:400px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" style="background:var(--bg-light)">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">The People</div>
+        <h2 class="section-title">Meet the Team</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal delay-100">
+          <div class="team-img-wrap"><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?w=600&q=80"
+              alt="Head Barista">
+            <div class="team-overlay"></div>
+          </div>
+          <h3 class="team-name">Rajan Mehta</h3>
+          <div class="team-role">Head Barista</div>
+          <p class="team-bio">5 years of espresso artistry. Rajan's latte pours are the stuff of legend in Bardoli.</p>
+        </div>
+        <div class="team-card reveal delay-200">
+          <div class="team-img-wrap"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+              alt="Chef">
+            <div class="team-overlay"></div>
+          </div>
+          <h3 class="team-name">Kavita Shah</h3>
+          <div class="team-role">Head Chef</div>
+          <p class="team-bio">Trained in Pune, Kavita brings a perfect balance of comfort and creativity to every dish.
+          </p>
+        </div>
+        <div class="team-card reveal delay-300">
+          <div class="team-img-wrap"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+              alt="Manager">
+            <div class="team-overlay"></div>
+          </div>
+          <h3 class="team-name">Dev Trivedi</h3>
+          <div class="team-role">Café Manager</div>
+          <p class="team-bio">Dev keeps everything running smoothly and makes sure every guest feels like a regular.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Our Journey</div>
+        <h2 class="section-title">A Timeline of Milestones</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">Year 1</div>
+            <div class="timeline-title">Coffee Hub Opens</div>
+            <div class="timeline-desc">We opened at Sundaram Square with a small menu and a big dream for Bardoli's
+              coffee culture.</div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">Year 2</div>
+            <div class="timeline-title">First 1,000 Reviews</div>
+            <div class="timeline-desc">Achieved 1,000 Google reviews with an average of 4.8 stars. The community had
+              spoken.</div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">Year 3</div>
+            <div class="timeline-title">Menu Expansion</div>
+            <div class="timeline-desc">Launched our full food menu including pizzas, burgers, pasta, and artisan
+              desserts.</div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">Today</div>
+            <div class="timeline-title">4.9 Stars &amp; Growing</div>
+            <div class="timeline-desc">Proudly serving Bardoli with a 4.9 Google rating and thousands of loyal guests
+              every month.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="section-sm" style="background:var(--bg-light)">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Recognition</div>
+        <h2 class="section-title">Awards &amp; Accolades</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="awards-row reveal">
+        <div class="award-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>Best Café in Bardoli</div>
+        <div class="award-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>4.9 Google Rating</div>
+        <div class="award-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>Community Favourite</div>
+        <div class="award-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>Top Café — Surat District</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-content reveal">
+      <h2 class="cta-title">Ready for your first visit?</h2>
+      <p class="cta-subtitle">Come experience what Bardoli is talking about. Open daily from 11 AM at Sundaram Square.
+      </p>
+      <div class="cta-actions"><a href="/reservation.html" class="btn btn-white btn-lg">Book a Table</a><a
+          href="/menu.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff">See Our
+          Menu</a></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="1" x2="6" y2="4" />
+              <line x1="10" y1="1" x2="10" y2="4" />
+              <line x1="14" y1="1" x2="14" y2="4" />
+            </svg>Coffee Hub</div>
+          <p class="footer-desc">Bardoli's favourite café — handcrafted coffee, freshly brewed teas, and comfort food
+            served with warmth every day from 11 AM.</p>
+          <div class="social-links"><a href="#" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg></a><a href="#" class="social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg></a></div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/menu.html">Our Menu</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/reviews.html">Reviews</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Visit Us</h4>
+          <ul class="footer-contact">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>Sundaram Square, Lal Bahadur Shastri Rd, Bardoli, Gujarat 394601</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.27 19.79 19.79 0 0 1 1.61 4.7 2 2 0 0 1 3.6 2.48h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l.97-.97a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z" />
+              </svg>+91 90996 78123</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>Mon–Fri 11am–10pm · Sat–Sun 11am–11pm</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Stay Updated</h4>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:16px">Subscribe for seasonal menu updates
+            and special events.</p>
+          <form class="newsletter-form"><input type="email" class="newsletter-input" placeholder="Your email address"
+              required><button type="submit" class="newsletter-btn">Go</button></form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Coffee Hub Bardoli. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+  <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15" />
+    </svg></button>
+  <div id="cursor-glow"></div>
+  <a id="whatsapp-btn" href="https://wa.me/919099678123?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Coffee%20Hub%20Bardoli!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

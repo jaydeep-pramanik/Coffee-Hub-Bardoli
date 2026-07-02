@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Coffee Hub Bardoli</title>
+  <meta name="description"
+    content="Explore Coffee Hub Bardoli's full menu — coffees, teas, cold drinks, pizzas, burgers, pasta and desserts. Starting from ₹80.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+
+<body>
+
+  <div id="loading-screen">
+    <div class="loader-glow"></div>
+    <div class="loader-inner">
+      <div class="loader-icon-wrap">
+        <div class="loader-ring"></div>
+        <svg class="loader-cup-icon" viewBox="0 0 56 56" fill="none" width="56" height="56">
+          <path d="M10 24h32l-4 22H14L10 24z" fill="rgba(200,144,14,0.9)" />
+          <path d="M42 30h5a7 7 0 0 1 0 14h-5" stroke="rgba(255,220,100,0.75)" stroke-width="2.5"
+            stroke-linecap="round" />
+          <rect x="8" y="18" width="36" height="8" rx="4" fill="rgba(200,144,14,0.4)" />
+          <ellipse cx="26" cy="18" rx="13" ry="4" fill="rgba(255,255,255,0.1)" />
+        </svg>
+        <div class="loader-steam-wrap">
+          <div class="steam-wisp sw-1"></div>
+          <div class="steam-wisp sw-2"></div>
+          <div class="steam-wisp sw-3"></div>
+        </div>
+      </div>
+      <h1 class="loader-logo-text"><span class="ll ll-1">C</span><span class="ll ll-2">o</span><span
+          class="ll ll-3">f</span><span class="ll ll-4">f</span><span class="ll ll-5">e</span><span
+          class="ll ll-6">e</span>&thinsp;<span class="ll ll-7">H</span><span class="ll ll-8">u</span><span
+          class="ll ll-9">b</span></h1>
+      <p class="loader-subtitle">Bardoli's Finest Café</p>
+      <div class="loader-progress">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+  <div id="scroll-progress"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+          <line x1="6" y1="1" x2="6" y2="4" />
+          <line x1="10" y1="1" x2="10" y2="4" />
+          <line x1="14" y1="1" x2="14" y2="4" />
+        </svg><span class="nav-logo-text">Coffee Hub</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/menu.html" class="active">Menu</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/reviews.html">Reviews</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions"><button class="theme-btn" aria-label="Toggle theme"><svg class="theme-icon-moon"
+            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg><svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" style="display:none">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+          </svg></button><a href="/reservation.html" class="btn btn-primary">Reserve Table</a><button class="hamburger"
+          id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+    </div>
+  </header>
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <nav class="mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/about.html">About</a><a href="/menu.html"
+      class="active">Menu</a><a href="/gallery.html">Gallery</a><a href="/reviews.html">Reviews</a><a
+      href="/contact.html">Contact</a><a href="/reservation.html" class="btn btn-primary">Reserve a Table</a></nav>
+
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="page-header-tag">What We Serve</div>
+      <h1 class="page-header-title">Our Menu</h1>
+      <p class="page-header-subtitle">Handcrafted drinks and freshly made food — everything made with care, every single
+        day.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+      <!-- Filter & Search -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="coffee">Coffee</button>
+        <button class="filter-btn" data-category="espresso">Espresso</button>
+        <button class="filter-btn" data-category="latte">Latte</button>
+        <button class="filter-btn" data-category="cappuccino">Cappuccino</button>
+        <button class="filter-btn" data-category="tea">Tea</button>
+        <button class="filter-btn" data-category="cold-coffee">Cold Coffee</button>
+        <button class="filter-btn" data-category="mocktails">Mocktails</button>
+        <button class="filter-btn" data-category="pizza">Pizza</button>
+        <button class="filter-btn" data-category="burger">Burger</button>
+        <button class="filter-btn" data-category="sandwich">Sandwich</button>
+        <button class="filter-btn" data-category="pasta">Pasta</button>
+        <button class="filter-btn" data-category="desserts">Desserts</button>
+        <div class="search-wrap">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" id="menu-search" class="search-input" placeholder="Search menu...">
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div id="menu-empty" style="display:none;text-align:center;padding:80px 0">
+        <div style="font-size:3rem;margin-bottom:16px">&#9749;</div>
+        <h3 style="font-family:var(--font-serif);margin-bottom:8px">Nothing found</h3>
+        <p style="color:var(--text-muted)">Try a different search term or category.</p>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid">
+
+        <!-- COFFEE -->
+        <div class="menu-card reveal" data-category="coffee">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80"
+              alt="Americano" loading="lazy"><span class="menu-card-price">&#8377;120</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Americano</h3>
+            <p class="menu-card-desc">Rich espresso diluted with hot water for a clean, bold black coffee.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="coffee">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80"
+              alt="Filter Coffee" loading="lazy"><span class="menu-card-price">&#8377;100</span><span
+              class="menu-card-badge">Local Fave</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Filter Coffee</h3>
+            <p class="menu-card-desc">South Indian style drip coffee, served in the traditional davara-tumbler style.
+            </p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESPRESSO -->
+        <div class="menu-card reveal" data-category="espresso">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=600&q=80"
+              alt="Double Espresso" loading="lazy"><span class="menu-card-price">&#8377;120</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Double Espresso</h3>
+            <p class="menu-card-desc">Two concentrated shots of our signature house blend — intense and aromatic.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="espresso">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1495474472201-4448558cf702?w=600&q=80"
+              alt="Ristretto" loading="lazy"><span class="menu-card-price">&#8377;110</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Ristretto</h3>
+            <p class="menu-card-desc">A short, concentrated espresso with sweeter, bolder flavour notes.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- LATTE -->
+        <div class="menu-card reveal" data-category="latte">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80"
+              alt="Classic Latte" loading="lazy"><span class="menu-card-price">&#8377;160</span><span
+              class="menu-card-badge">Bestseller</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Classic Latte</h3>
+            <p class="menu-card-desc">Silky steamed milk poured over a double shot of espresso, with a velvety microfoam
+              top.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="latte">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80"
+              alt="Caramel Latte" loading="lazy"><span class="menu-card-price">&#8377;190</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Caramel Latte</h3>
+            <p class="menu-card-desc">Espresso and steamed milk with a ribbon of golden caramel sauce.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="latte">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=600&q=80"
+              alt="Vanilla Latte" loading="lazy"><span class="menu-card-price">&#8377;180</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Vanilla Latte</h3>
+            <p class="menu-card-desc">Classic latte sweetened with pure vanilla syrup — smooth, aromatic and comforting.
+            </p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAPPUCCINO -->
+        <div class="menu-card reveal" data-category="cappuccino">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80"
+              alt="Classic Cappuccino" loading="lazy"><span class="menu-card-price">&#8377;150</span><span
+              class="menu-card-badge">Popular</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Classic Cappuccino</h3>
+            <p class="menu-card-desc">Equal parts espresso, steamed milk, and thick velvety foam — a café staple.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="cappuccino">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=600&q=80"
+              alt="Iced Cappuccino" loading="lazy"><span class="menu-card-price">&#8377;170</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Iced Cappuccino</h3>
+            <p class="menu-card-desc">All the cappuccino goodness over ice — cold, creamy and refreshing.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEA -->
+        <div class="menu-card reveal" data-category="tea">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80"
+              alt="Masala Chai" loading="lazy"><span class="menu-card-price">&#8377;80</span><span
+              class="menu-card-badge">Must Try</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Masala Chai</h3>
+            <p class="menu-card-desc">House-blend spiced chai brewed strong with cardamom, ginger, and cinnamon.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="tea">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80"
+              alt="Green Tea" loading="lazy"><span class="menu-card-price">&#8377;90</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Green Tea</h3>
+            <p class="menu-card-desc">Premium Japanese green tea, delicately brewed to retain its natural antioxidants.
+            </p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLD COFFEE -->
+        <div class="menu-card reveal" data-category="cold-coffee">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80"
+              alt="Cold Brew" loading="lazy"><span class="menu-card-price">&#8377;180</span><span
+              class="menu-card-badge">Bestseller</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Cold Brew</h3>
+            <p class="menu-card-desc">12-hour cold-steeped for a smooth, naturally sweet, low-acid cold coffee.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="cold-coffee">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1583494870024-6ed44dba6e50?w=600&q=80"
+              alt="Frappe" loading="lazy"><span class="menu-card-price">&#8377;200</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Coffee Frappe</h3>
+            <p class="menu-card-desc">Blended iced coffee with whipped cream — thick, indulgent, and delicious.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="cold-coffee">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1551879400-111a9087cd86?w=600&q=80"
+              alt="Iced Latte" loading="lazy"><span class="menu-card-price">&#8377;170</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Iced Latte</h3>
+            <p class="menu-card-desc">Espresso over ice, topped with cold milk. Clean, refreshing, and energising.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOCKTAILS -->
+        <div class="menu-card reveal" data-category="mocktails">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80"
+              alt="Lemonade" loading="lazy"><span class="menu-card-price">&#8377;150</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Fresh Lemonade</h3>
+            <p class="menu-card-desc">House-squeezed lemon with mint and a touch of honey over crushed ice.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="mocktails">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1541614101331-1a5a3a194e92?w=600&q=80"
+              alt="Virgin Mojito" loading="lazy"><span class="menu-card-price">&#8377;170</span><span
+              class="menu-card-badge">Popular</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Virgin Mojito</h3>
+            <p class="menu-card-desc">Lime, mint leaves, sugar syrup and soda water — vibrant and refreshing.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PIZZA -->
+        <div class="menu-card reveal" data-category="pizza">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80"
+              alt="Margherita Pizza" loading="lazy"><span class="menu-card-price">&#8377;250</span><span
+              class="menu-card-badge">Classic</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Margherita Pizza</h3>
+            <p class="menu-card-desc">Tomato base, fresh mozzarella and basil on a golden thin crust.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="pizza">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80"
+              alt="BBQ Chicken Pizza" loading="lazy"><span class="menu-card-price">&#8377;350</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">BBQ Chicken Pizza</h3>
+            <p class="menu-card-desc">Smoky BBQ sauce, grilled chicken, red onion and peppers on thin crust.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="pizza">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=600&q=80"
+              alt="Veggie Supreme Pizza" loading="lazy"><span class="menu-card-price">&#8377;300</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Veggie Supreme</h3>
+            <p class="menu-card-desc">Capsicum, olives, corn, onion and paneer on a herbed tomato base.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BURGER -->
+        <div class="menu-card reveal" data-category="burger">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80"
+              alt="Chicken Burger" loading="lazy"><span class="menu-card-price">&#8377;250</span><span
+              class="menu-card-badge">Bestseller</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Crispy Chicken Burger</h3>
+            <p class="menu-card-desc">Crispy fried chicken, house slaw, pickles and chipotle mayo in a brioche bun.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="burger">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80"
+              alt="Veg Burger" loading="lazy"><span class="menu-card-price">&#8377;210</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Veggie Burger</h3>
+            <p class="menu-card-desc">House-made spiced veggie patty with lettuce, tomato and tangy sauce.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SANDWICH -->
+        <div class="menu-card reveal" data-category="sandwich">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=600&q=80"
+              alt="Club Sandwich" loading="lazy"><span class="menu-card-price">&#8377;200</span><span
+              class="menu-card-badge">Popular</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Club Sandwich</h3>
+            <p class="menu-card-desc">Triple-decker with grilled chicken, egg, lettuce, tomato and mayo on toasted
+              bread.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="sandwich">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600&q=80"
+              alt="Paneer Tikka Sandwich" loading="lazy"><span class="menu-card-price">&#8377;190</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Paneer Tikka Sandwich</h3>
+            <p class="menu-card-desc">Spiced paneer tikka with mint chutney and crispy onion on ciabatta.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASTA -->
+        <div class="menu-card reveal" data-category="pasta">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=600&q=80"
+              alt="Arrabbiata Pasta" loading="lazy"><span class="menu-card-price">&#8377;240</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Penne Arrabbiata</h3>
+            <p class="menu-card-desc">Penne in a spicy tomato and garlic sauce, topped with fresh basil and parmesan.
+            </p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="pasta">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80"
+              alt="Pesto Pasta" loading="lazy"><span class="menu-card-price">&#8377;260</span><span
+              class="menu-card-badge">Chef's Pick</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Pesto Pasta</h3>
+            <p class="menu-card-desc">Fusilli tossed in house-made basil pesto with roasted cherry tomatoes and pine
+              nuts.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESSERTS -->
+        <div class="menu-card reveal" data-category="desserts">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&q=80"
+              alt="Tiramisu" loading="lazy"><span class="menu-card-price">&#8377;200</span><span
+              class="menu-card-badge">Must Try</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Tiramisu</h3>
+            <p class="menu-card-desc">Espresso-dipped ladyfingers layered with mascarpone cream and dusted with cocoa.
+            </p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="desserts">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80"
+              alt="Chocolate Cake" loading="lazy"><span class="menu-card-price">&#8377;180</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Chocolate Fudge Cake</h3>
+            <p class="menu-card-desc">Rich Belgian chocolate cake with ganache frosting and a molten centre.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-category="desserts">
+          <div class="menu-card-img"><img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80"
+              alt="Cheesecake" loading="lazy"><span class="menu-card-price">&#8377;210</span></div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">NY Cheesecake</h3>
+            <p class="menu-card-desc">Classic New York cheesecake on a buttery biscuit base with a berry compote.</p>
+            <div class="menu-card-footer"><a href="/reservation.html" class="btn btn-primary btn-order">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end menu-grid -->
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container cta-content reveal">
+      <h2 class="cta-title">Dine with us today.</h2>
+      <p class="cta-subtitle">Book a table and enjoy any item on our menu in a warm, welcoming ambiance. Open from 11 AM
+        daily.</p>
+      <div class="cta-actions"><a href="/reservation.html" class="btn btn-white btn-lg">Reserve a Table</a><a
+          href="/contact.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff">Find
+          Us</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="1" x2="6" y2="4" />
+              <line x1="10" y1="1" x2="10" y2="4" />
+              <line x1="14" y1="1" x2="14" y2="4" />
+            </svg>Coffee Hub</div>
+          <p class="footer-desc">Bardoli's favourite café — handcrafted coffee, freshly brewed teas, and comfort food
+            served with warmth every day from 11 AM.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/menu.html">Our Menu</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/reviews.html">Reviews</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Visit Us</h4>
+          <ul class="footer-contact">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>Sundaram Square, Lal Bahadur Shastri Rd, Bardoli, Gujarat 394601</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.27 19.79 19.79 0 0 1 1.61 4.7 2 2 0 0 1 3.6 2.48h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l.97-.97a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z" />
+              </svg>+91 90996 78123</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>Mon–Fri 11am–10pm · Sat–Sun 11am–11pm</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Stay Updated</h4>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:16px">Subscribe for seasonal menu
+            updates.</p>
+          <form class="newsletter-form"><input type="email" class="newsletter-input" placeholder="Your email address"
+              required><button type="submit" class="newsletter-btn">Go</button></form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Coffee Hub Bardoli. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+  <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15" />
+    </svg></button>
+  <div id="cursor-glow"></div>
+  <a id="whatsapp-btn"
+    href="https://wa.me/919099678123?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Coffee%20Hub%20Bardoli!"
+    target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  </a>
+  <script src="/js/script.js"></script>
+  <script src="/js/menu.js"></script>
+</body>
+
+</html>

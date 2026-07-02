@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews — Coffee Hub Bardoli</title>
+  <meta name="description"
+    content="Read reviews for Coffee Hub Bardoli — rated 4.9 stars on Google. See what our guests love about us.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+</head>
+
+<body>
+
+  <div id="loading-screen">
+    <div class="loader-glow"></div>
+    <div class="loader-inner">
+      <div class="loader-icon-wrap">
+        <div class="loader-ring"></div>
+        <svg class="loader-cup-icon" viewBox="0 0 56 56" fill="none" width="56" height="56">
+          <path d="M10 24h32l-4 22H14L10 24z" fill="rgba(200,144,14,0.9)"/>
+          <path d="M42 30h5a7 7 0 0 1 0 14h-5" stroke="rgba(255,220,100,0.75)" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="8" y="18" width="36" height="8" rx="4" fill="rgba(200,144,14,0.4)"/>
+          <ellipse cx="26" cy="18" rx="13" ry="4" fill="rgba(255,255,255,0.1)"/>
+        </svg>
+        <div class="loader-steam-wrap">
+          <div class="steam-wisp sw-1"></div>
+          <div class="steam-wisp sw-2"></div>
+          <div class="steam-wisp sw-3"></div>
+        </div>
+      </div>
+      <h1 class="loader-logo-text"><span class="ll ll-1">C</span><span class="ll ll-2">o</span><span class="ll ll-3">f</span><span class="ll ll-4">f</span><span class="ll ll-5">e</span><span class="ll ll-6">e</span>&thinsp;<span class="ll ll-7">H</span><span class="ll ll-8">u</span><span class="ll ll-9">b</span></h1>
+      <p class="loader-subtitle">Bardoli's Finest Café</p>
+      <div class="loader-progress"><div class="loader-progress-fill"></div></div>
+    </div>
+  </div>
+  <div id="scroll-progress"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+          <line x1="6" y1="1" x2="6" y2="4" />
+          <line x1="10" y1="1" x2="10" y2="4" />
+          <line x1="14" y1="1" x2="14" y2="4" />
+        </svg><span class="nav-logo-text">Coffee Hub</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/reviews.html" class="active">Reviews</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions"><button class="theme-btn" aria-label="Toggle theme"><svg class="theme-icon-moon"
+            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg><svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" style="display:none">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+          </svg></button><a href="/reservation.html" class="btn btn-primary">Reserve Table</a><button class="hamburger"
+          id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+    </div>
+  </header>
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <nav class="mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/about.html">About</a><a
+      href="/menu.html">Menu</a><a href="/gallery.html">Gallery</a><a href="/reviews.html" class="active">Reviews</a><a
+      href="/contact.html">Contact</a><a href="/reservation.html" class="btn btn-primary">Reserve a Table</a></nav>
+
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="page-header-tag">Guest Voices</div>
+      <h1 class="page-header-title">What Our Guests Say</h1>
+      <p class="page-header-subtitle">4.9 stars on Google. But don't take our word for it — hear it from the people who
+        matter most.</p>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--bg)">
+    <div class="container">
+
+      <!-- Rating Stats -->
+      <div class="review-stats reveal">
+        <div class="avg-score">
+          <div class="avg-number">4.9</div>
+          <div class="avg-stars"><span class="star" style="color:var(--accent);font-size:1.4rem">&#9733;</span><span
+              class="star" style="color:var(--accent);font-size:1.4rem">&#9733;</span><span class="star"
+              style="color:var(--accent);font-size:1.4rem">&#9733;</span><span class="star"
+              style="color:var(--accent);font-size:1.4rem">&#9733;</span><span class="star"
+              style="color:var(--accent);font-size:1.4rem">&#9733;</span></div>
+          <div class="avg-count">Based on Google Reviews</div>
+        </div>
+        <div class="rating-bars">
+          <div class="rating-bar-row"><span>5 &#9733;</span>
+            <div class="rating-bar-track">
+              <div class="rating-bar-fill" style="width:88%"></div>
+            </div><span>88%</span>
+          </div>
+          <div class="rating-bar-row"><span>4 &#9733;</span>
+            <div class="rating-bar-track">
+              <div class="rating-bar-fill" style="width:9%"></div>
+            </div><span>9%</span>
+          </div>
+          <div class="rating-bar-row"><span>3 &#9733;</span>
+            <div class="rating-bar-track">
+              <div class="rating-bar-fill" style="width:2%"></div>
+            </div><span>2%</span>
+          </div>
+          <div class="rating-bar-row"><span>2 &#9733;</span>
+            <div class="rating-bar-track">
+              <div class="rating-bar-fill" style="width:1%"></div>
+            </div><span>1%</span>
+          </div>
+          <div class="rating-bar-row"><span>1 &#9733;</span>
+            <div class="rating-bar-track">
+              <div class="rating-bar-fill" style="width:0%"></div>
+            </div><span>0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider -->
+      <div class="section-header reveal" style="margin-bottom:32px">
+        <div class="section-tag">Testimonial Slider</div>
+        <h2 class="section-title">Featured Reviews</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="slider-wrap reveal">
+        <div id="slider-track">
+          <div class="slider-slide">
+            <div class="testimonial-card" style="max-width:700px;margin:0 auto">
+              <div class="quote-icon">"</div>
+              <div class="stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+                  class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+              <p class="testimonial-text" style="font-size:1.05rem">Coffee Hub is my go-to spot after work. The latte is
+                absolutely perfect every single time. The staff knows my order by heart — that says everything about
+                this place.</p>
+              <div class="testimonial-author"><img class="author-avatar" src="https://i.pravatar.cc/80?img=11"
+                  alt="Priya S.">
+                <div>
+                  <div class="author-name">Priya Sharma</div>
+                  <div class="author-date">June 2026 · Google Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-slide">
+            <div class="testimonial-card" style="max-width:700px;margin:0 auto">
+              <div class="quote-icon">"</div>
+              <div class="stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+                  class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+              <p class="testimonial-text" style="font-size:1.05rem">Best café in Bardoli without a doubt. The cold brew
+                is exceptional and the margherita pizza rivals anything I've had in Surat. Will be back every weekend!
+              </p>
+              <div class="testimonial-author"><img class="author-avatar" src="https://i.pravatar.cc/80?img=32"
+                  alt="Rahul P.">
+                <div>
+                  <div class="author-name">Rahul Patel</div>
+                  <div class="author-date">May 2026 · Google Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-slide">
+            <div class="testimonial-card" style="max-width:700px;margin:0 auto">
+              <div class="quote-icon">"</div>
+              <div class="stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+                  class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+              <p class="testimonial-text" style="font-size:1.05rem">Came for coffee, stayed for the tiramisu. The vibe
+                is warm and unhurried — exactly what you need after a long day. This place has a permanent spot in my
+                heart.</p>
+              <div class="testimonial-author"><img class="author-avatar" src="https://i.pravatar.cc/80?img=48"
+                  alt="Ananya D.">
+                <div>
+                  <div class="author-name">Ananya Desai</div>
+                  <div class="author-date">April 2026 · Google Review</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="slider-prev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6" />
+          </svg></button>
+        <div id="slider-dots"></div>
+        <button class="slider-btn" id="slider-next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+          </svg></button>
+      </div>
+
+      <!-- All Reviews Grid -->
+      <div class="section-header reveal mt-16">
+        <div class="section-tag">All Reviews</div>
+        <h2 class="section-title">From Our Community</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal delay-100">
+          <div class="review-header"><img class="reviewer-avatar" src="https://i.pravatar.cc/80?img=11" alt="Priya S.">
+            <div>
+              <div class="reviewer-name">Priya Sharma</div>
+              <div class="reviewer-date">June 2026</div>
+            </div>
+          </div>
+          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+              class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+          <p class="review-body">Coffee Hub is my go-to spot after work. The latte is absolutely perfect every single
+            time. The staff knows my order by heart — that says everything.</p>
+        </div>
+        <div class="review-card reveal delay-200">
+          <div class="review-header"><img class="reviewer-avatar" src="https://i.pravatar.cc/80?img=32" alt="Rahul P.">
+            <div>
+              <div class="reviewer-name">Rahul Patel</div>
+              <div class="reviewer-date">May 2026</div>
+            </div>
+          </div>
+          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+              class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+          <p class="review-body">Best café in Bardoli without a doubt. The cold brew is exceptional and the margherita
+            pizza rivals anything I've had in Surat. Highly recommended!</p>
+        </div>
+        <div class="review-card reveal delay-300">
+          <div class="review-header"><img class="reviewer-avatar" src="https://i.pravatar.cc/80?img=48" alt="Ananya D.">
+            <div>
+              <div class="reviewer-name">Ananya Desai</div>
+              <div class="reviewer-date">April 2026</div>
+            </div>
+          </div>
+          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+              class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+          <p class="review-body">Came for coffee, stayed for the tiramisu. The vibe is warm and unhurried — exactly what
+            you need after a long day.</p>
+        </div>
+        <div class="review-card reveal delay-100">
+          <div class="review-header"><img class="reviewer-avatar" src="https://i.pravatar.cc/80?img=57" alt="Mihir J.">
+            <div>
+              <div class="reviewer-name">Mihir Joshi</div>
+              <div class="reviewer-date">March 2026</div>
+            </div>
+          </div>
+          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+              class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+          <p class="review-body">Amazing place! The masala chai here is the best I've had outside of home. Service was
+            fast and the staff was super friendly. 5 stars no question.</p>
+        </div>
+        <div class="review-card reveal delay-200">
+          <div class="review-header"><img class="reviewer-avatar" src="https://i.pravatar.cc/80?img=20" alt="Sunita R.">
+            <div>
+              <div class="reviewer-name">Sunita Rao</div>
+              <div class="reviewer-date">February 2026</div>
+            </div>
+          </div>
+          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+              class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+          <p class="review-body">Came here for a team lunch and everyone loved it. The veggie supreme pizza and club
+            sandwiches were excellent. Great ambiance for group gatherings too.</p>
+        </div>
+        <div class="review-card reveal delay-300">
+          <div class="review-header"><img class="reviewer-avatar" src="https://i.pravatar.cc/80?img=61" alt="Arjun K.">
+            <div>
+              <div class="reviewer-name">Arjun Kumar</div>
+              <div class="reviewer-date">January 2026</div>
+            </div>
+          </div>
+          <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span
+              class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+          <p class="review-body">The cheesecake here is divine. Honestly I've tried places in Surat and Ahmedabad and
+            Coffee Hub holds its own beautifully. Great music, great coffee, great food.</p>
+        </div>
+      </div>
+
+      <!-- Leave Review Form -->
+      <div class="review-form-wrap reveal mt-16">
+        <div class="section-header" style="text-align:left;margin-bottom:32px">
+          <div class="section-tag">Share Your Experience</div>
+          <h2 class="section-title" style="text-align:left">Leave a Review</h2>
+        </div>
+        <form id="review-form">
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label" for="reviewer-name">Your Name</label><input type="text"
+                id="reviewer-name" name="reviewer-name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group"><label class="form-label" for="reviewer-email">Email Address</label><input
+                type="email" id="reviewer-email" name="reviewer-email" class="form-control"
+                placeholder="your@email.com"></div>
+          </div>
+          <div class="form-group" style="margin-top:20px">
+            <label class="form-label">Your Rating</label>
+            <div class="star-picker">
+              <input type="radio" name="rating" id="r5" value="5"><label for="r5" title="5 stars">&#9733;</label>
+              <input type="radio" name="rating" id="r4" value="4"><label for="r4" title="4 stars">&#9733;</label>
+              <input type="radio" name="rating" id="r3" value="3"><label for="r3" title="3 stars">&#9733;</label>
+              <input type="radio" name="rating" id="r2" value="2"><label for="r2" title="2 stars">&#9733;</label>
+              <input type="radio" name="rating" id="r1" value="1"><label for="r1" title="1 star">&#9733;</label>
+            </div>
+          </div>
+          <div class="form-group full" style="margin-top:20px"><label class="form-label" for="review-text">Your
+              Review</label><textarea id="review-text" name="review-text" class="form-control" rows="5"
+              placeholder="Tell us about your experience at Coffee Hub Bardoli..." required></textarea></div>
+          <div style="margin-top:24px"><button type="submit" class="btn btn-primary btn-lg">Submit Review</button></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content reveal">
+      <h2 class="cta-title">Join thousands of happy guests.</h2>
+      <p class="cta-subtitle">Book a table today and create your own Coffee Hub memory. Open daily from 11 AM.</p>
+      <div class="cta-actions"><a href="/reservation.html" class="btn btn-white btn-lg">Book a Table</a><a
+          href="/menu.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff">View
+          Menu</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="1" x2="6" y2="4" />
+              <line x1="10" y1="1" x2="10" y2="4" />
+              <line x1="14" y1="1" x2="14" y2="4" />
+            </svg>Coffee Hub</div>
+          <p class="footer-desc">Bardoli's favourite café — open daily from 11 AM at Sundaram Square.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/menu.html">Our Menu</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/reviews.html">Reviews</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Visit Us</h4>
+          <ul class="footer-contact">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>Sundaram Square, Lal Bahadur Shastri Rd, Bardoli, Gujarat 394601</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.27 19.79 19.79 0 0 1 1.61 4.7 2 2 0 0 1 3.6 2.48h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l.97-.97a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z" />
+              </svg>+91 90996 78123</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Stay Updated</h4>
+          <form class="newsletter-form"><input type="email" class="newsletter-input" placeholder="Your email address"
+              required><button type="submit" class="newsletter-btn">Go</button></form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Coffee Hub Bardoli. All rights reserved.</p>
+        <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+  <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15" />
+    </svg></button>
+  <div id="cursor-glow"></div>
+  <a id="whatsapp-btn" href="https://wa.me/919099678123?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Coffee%20Hub%20Bardoli!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+  <script src="/js/script.js"></script>
+  <script src="/js/reviews.js"></script>
+</body>
+
+</html>
